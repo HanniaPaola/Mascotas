@@ -1,0 +1,16 @@
+.footer {
+    background-color: #0f0f0f; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Para posicionar correctamente */
+    bottom: 0; /* Mantenerlo en la parte inferior */
+    width: 100%; /* Ancho completo */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.footer p {
+    margin: 0; /* Sin margen */
+    font-family: 'Arial', sans-serif; /* Fuente */
+}

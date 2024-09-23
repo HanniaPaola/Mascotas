@@ -1,0 +1,62 @@
+<div class="grid-container">
+    
+    <!-- Card del Formulario -->
+    <mat-card class="dashboard-card">
+    <mat-card-content class="dashboard-card-content">
+        
+        <form (ngSubmit)="agregarMascota()">
+        <label for="text">ID</label>
+        <input type="number" placeholder="ID" [(ngModel)]="nuevaMascota.id" name="id" required />
+
+        <label for="text">Name</label>
+        <input type="text" placeholder="Name" [(ngModel)]="nuevaMascota.name" name="name" required />
+
+          <label for="text">Type</label>
+          <input
+            type="text"
+            placeholder="Ingrese los tipos"
+            [(ngModel)]="typeString"
+            name="type"
+            required
+          />
+  
+          <button type="submit" mat-button>Agregar Mascota</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  
+    <!-- Card de la Tabla de Mascotas -->
+    <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>Mascotas Agregadas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let elementStudent of mascotaArray; trackBy: trackById">
+                <td>{{elementStudent.id}}</td>
+                <td>{{elementStudent.name}}</td>
+                <td>
+                  <button mat-button (click)="deleteMascota(elementStudent.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+        
+      </mat-card>
+
+
+
+
+
+  
+  
+  
